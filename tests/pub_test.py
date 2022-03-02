@@ -1,6 +1,8 @@
 import unittest
 
 from src.pub import Pub
+from src.customer import Customer
+from src.drink import Drink
 
 class TestPub(unittest.TestCase):
     def setUp(self):
@@ -14,3 +16,18 @@ class TestPub(unittest.TestCase):
         expected = 102.50
         actual = self.pub.till
         self.assertEqual(expected, actual)
+    
+    def test_decrease_till(self):
+        self.pub.decrease_till(4.00)
+        expected = 96.00
+        actual = self.pub.till
+        self.assertEqual(expected, actual)
+
+    def test_customer_age(self): 
+        self.assertEqual("Hurray! Customer is 18 or over.")
+
+
+
+
+    
+
