@@ -3,4 +3,10 @@ class Customer:
         self.name = name
         self.wallet = wallet 
         self.age = age
+    
+    def buy_drink(self, drink):
+        self.wallet -= drink.price
+
+
+
 
